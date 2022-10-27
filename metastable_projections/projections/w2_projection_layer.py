@@ -4,7 +4,7 @@ from typing import Tuple, Any
 
 from ..misc.norm import mahalanobis
 
-from .base_projection_layer import BaseProjectionLayer, mean_projection, mean_equality_projection
+from .base_projection_layer import BaseProjectionLayer, mean_projection
 
 from ..misc.norm import mahalanobis, _batch_trace
 from ..misc.distTools import get_diag_cov_vec, get_mean_and_chol,  get_mean_and_sqrt, get_cov, new_dist_like_from_sqrt, has_diag_cov
@@ -12,7 +12,7 @@ from ..misc.distTools import get_diag_cov_vec, get_mean_and_chol,  get_mean_and_
 
 class WassersteinProjectionLayer(BaseProjectionLayer):
     """
-    Stolen from Fabian's Code (Private Version)
+    Stolen from Fabian's Code (Public Version)
     """
 
     def _trust_region_projection(self, p, q, eps: th.Tensor, eps_cov: th.Tensor, **kwargs):

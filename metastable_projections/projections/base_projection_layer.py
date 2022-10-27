@@ -166,7 +166,7 @@ def entropy_equality_projection(p: th.distributions.Normal,
 
 def mean_projection(mean: th.Tensor, old_mean: th.Tensor, maha: th.Tensor, eps: th.Tensor):
     """
-    Stolen from Fabian's Code (Private Version)
+    Stolen from Fabian's Code (Public Version)
 
     Projects the mean based on the Mahalanobis objective and trust region.
     Args:
